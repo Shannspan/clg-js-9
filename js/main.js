@@ -1,4 +1,4 @@
-document.getElementById("marine-park").style.backgroundColor = " #D5D3D9";
+document.getElementById("marine-park").style.backgroundColor = "#D5D3D9";
 
 wrappers = document.querySelector(".wrapper");
 
@@ -18,6 +18,7 @@ gameTitle.addEventListener("mouseover",popShell);
 //Function for Index page Select favourite shell
 
 const select = document.querySelector('select');
+
 const para = document.getElementById("selector-output");
 
 select.addEventListener('change', setShell);
@@ -58,6 +59,26 @@ console.log(beachProfile.location);
  };
 //Fetch data - sent to console as per method
  beachProfile2.beach();
+
+ // Contact page, Fetch API, Open Weather
+ const apiKey = 'c30f902e669409d98c660e4a0f3d50a7';
+ let lat = '-23.14';
+ let long = '113.77';
+
+ const apiCall = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}';
+ console.log(apiCall);
+
+ function fetchWeather() {
+  fetch(apiCall)
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById("temp").innerHTML = tempCoralBay
+    console.log(data);
+  })
+ }
+
+ fetchWeather();
+
 
 
 

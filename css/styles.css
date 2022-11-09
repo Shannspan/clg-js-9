@@ -166,6 +166,9 @@ p {
     padding: 1em;
     text-align: center;
 }
+#marine-park {
+    text-align: center;
+}
 
 /*game styling*/
 
@@ -247,6 +250,12 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+/*Fetch API Open Weather*/
+
+#temp {
+    font-size: 2em;
+    color: red;
 }
 
 
