@@ -112,8 +112,13 @@ p {
     padding-left: 2em;
 }
 #selector {
+    width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+#selector-output {
+   color: #D5D3D9;
 }
 
 #shell-choice {
