@@ -1,7 +1,12 @@
 //Contact.html db poetry
 
-const apiPoem = 'https://poetrydb.org/random';
-console.log(apiPoem);
+const apiPoem = 'https://poetrydb.org/random'
+    console.log(apiPoem);
+
+const poemBtn = document.getElementById('poem-btn');
+
+poemBtn.addEventListener('click', fetchPoem)
+
 
 function fetchPoem() {
     fetch(apiPoem)
@@ -12,8 +17,9 @@ function fetchPoem() {
         let poemPop = data[0].lines;
         document.getElementById("title-poem").innerHTML = poemName;
         document.getElementById("author-poem").innerHTML = poemWriter;
-        document.getElementById("random-poem").innerHTML = poemPop;
+        document.getElementById("random-poem").innerHTML = poemPop;            
         console.log(data);
-})}
+    });
+} 
 
 fetchPoem();
